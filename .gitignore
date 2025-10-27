@@ -1,16 +1,11 @@
 # macOS system files
 **/.DS_Store
-.DS_Store
-*.DS_Store
 
 # VS Code settings
 **/.vscode/
-.vscode/
-.vscode/*
 
 # Java class files
 **/*.class
-*.class
 
 # Temporary files
 *.tmp
