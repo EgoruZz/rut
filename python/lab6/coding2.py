@@ -1,10 +1,12 @@
-print("Задайте массив из 10 чисел")
-a = [int(input(f"Введите элемент {i}: ")) for i in range(10)]
+n = int(input("Введите длину массива: "))
+a = [int(input(f"Введите элемент {i}: ")) for i in range(n)]
+print("Исохдный массив: ", a)
 
-summ = 0
-for i in range(len(a)): summ += a[i]
-mid = summ / len(a)
-print("Среднее арифмитическое массива:", mid)
+mn = [int(10e13), -1]
+mx = [int(-10e13), -1]
+for i in range(n):
+    if mn[0] > a[i]: mn = [a[i], i]
+    if mx[0] < a[i]: mx = [a[i], i]
 
-a = [1 if elem > mid else elem for elem in a]
-print("После замены чисел, больших ср. арифм. на 1:", a)
+a[mn[1]], a[mx[1]] = a[mx[1]], a[mn[1]]
+print("Полученный массив: ", a)
