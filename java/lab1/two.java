@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class NextSymbol {
+public class two {
     public static void main(String[] args) {
         int N = 31;
 

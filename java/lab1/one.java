@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class TicketClerk {
+public class one {
     public static void main(String[] args) {
         double N = 31.0;
         double cost = 123.45 * N, discount = 0.95;
