@@ -17,11 +17,10 @@ public class first {
                 continue;
             }
             boolean find = false;
-            for (int x = 2; x * x <= number && !find; x++) {
-                find = number % x == 0;
-                non_prime = (non_prime < number && find) ? number : non_prime;
-            }
-            prime = (number < prime && !find) ? number : prime;
+            for (int x = 2; x * x <= number && !find; x++) find = number % x == 0;                
+
+            non_prime = (find && non_prime < number) ? number : non_prime;
+            prime = (!find && number < prime) ? number : prime;
             word = scanner.nextLine();
         }
 
