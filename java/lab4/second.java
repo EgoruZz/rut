@@ -12,8 +12,9 @@ public class second {
         while (true) {
             if (place.equals("stop")) break;
             if (scanner.hasNextInt()) {
-                if (cost == 0) {cost = Integer.parseInt(scanner.nextLine());}
-                else {sum += Integer.parseInt(scanner.nextLine());}
+                if (cost == 0) cost = Integer.parseInt(scanner.nextLine());
+                else sum += Integer.parseInt(scanner.nextLine());
+                
                 if (cost <= sum && placed) {
                     System.out.printf("Going to %s%n", place);
                     sum -= cost;
