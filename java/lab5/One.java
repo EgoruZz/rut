@@ -1,8 +1,11 @@
+package z;
+
 import java.util.Scanner;
 public class One {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         voice(scanner.nextInt());
+        scanner.close();
     }
     static void voice(int number) {
         System.out.println(

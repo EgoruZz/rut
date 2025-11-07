@@ -1,3 +1,5 @@
+package z;
+
 import java.util.Scanner;
 
 public class Two {
@@ -5,24 +7,19 @@ public class Two {
 
     public static void main(String[] args) {
         String text = scanner.nextLine();
-        
-        boolean key_word = switch (text) {
-            case "А роза упала на лапу Азора" -> true;
-            case "Мат и тут, и там!" -> true;
-            case "Лег на храм, и дивен и невидим Архангел." -> true;
-            case "Муха! О, муха! Велика аки лев! Ах, ум! О ах, ум!" -> true;
-            case "Лёша на полке клопа нашёл" -> true;
-            default -> false;
-        };
+        String begin_text = text;
 
-        if (key_word) {
-            System.out.printf("'%s' is palindrome", text);
-        } else {
-            System.out.printf(
-                "'%s' %s palindrome",
-                text,
-                ((isPalindrome(text)) ? "is" : "is NOT") );
+        String junk = " .!,?<>'%$#-+=:*";
+        for (char symbol : junk.toCharArray()) {
+            text = text.replace(String.valueOf(symbol), "");
         }
+        text = text.toLowerCase();
+        
+
+        System.out.printf(
+            "'%s' %s palindrome",
+            begin_text,
+            ((isPalindrome(text)) ? "is" : "is NOT") );
     }
 
     static boolean isPalindrome(String msg) {
