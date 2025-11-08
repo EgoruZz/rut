@@ -1,5 +1,3 @@
-package z;
-
 import java.util.Scanner;
 public class One {
     public static void main(String[] args) {
@@ -10,8 +8,8 @@ public class One {
     static void voice(int number) {
         System.out.println(
             switch (number) {
-                case 1 -> "One";
-                case 2 -> "Two";
+                case 1 -> "one";
+                case 2 -> "two";
                 case 3 -> "Three";
                 case 4 -> "Four";
                 case 5 -> "Five";

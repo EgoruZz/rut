@@ -1,5 +1,3 @@
-package z;
-
 import java.util.Scanner;
 
 public class Two {
@@ -10,7 +8,8 @@ public class Two {
         String begin_text = text;
 
         String junk = " .!,?<>'%$#-+=:*";
-        for (char symbol : junk.toCharArray()) {
+        for (int i = 0; i < junk.length(); i++) {
+            char symbol = junk.charAt(i);
             text = text.replace(String.valueOf(symbol), "");
         }
         text = text.toLowerCase();
